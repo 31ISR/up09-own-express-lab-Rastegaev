@@ -7,7 +7,7 @@ const db = new Database('database.db') // создаёт файл автомат
 db.prepare(`
     CREATE TABLE IF NOT EXISTS User (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        username TEXT NOT NULL,
+        username TEXT NOT NULL UNIQUE,
         email TEXT UNIQUE NOT NULL,
         password  TEXT NOT NULL,
         role TEXT NOT NULL DEFAULT "user",
@@ -25,6 +25,18 @@ db.prepare(`
         content TEXT NOT NULL,
         main_image TEXT,
         secondary_image TEXT
+    ) 
+`).run()
+
+db.prepare(`
+    CREATE TABLE IF NOT EXISTS Comment (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        nameState TEXT NOT NULL,
+        userId INTEGER NOT NULL,
+        userName TEXT NOT NULL,
+        textComment TEXT NOT NULL,
+        FOREIGN KEY (userId) REFERENCES User (id) ON DELETE CASCADE,
+        FOREIGN KEY (userName) REFERENCES User (username) ON DELETE CASCADE
     ) 
 `).run()
 

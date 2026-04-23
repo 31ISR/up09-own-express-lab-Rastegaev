@@ -15,7 +15,7 @@ async function newState() {
         formData.append('mainImage', mainImage);
         formData.append('secondaryImage', secondaryImage);
 
-        const response = await fetch("https://8tfvph95-3001.euw.devtunnels.ms/api/admin/news", {
+        const response = await fetch("https://zany-winner-975xvj5wv9652pvqp-3001.app.github.dev/api/admin/news", {
             method: "POST",
             headers: {
                 Authorization: 'Bearer ' + localStorage.getItem('token')

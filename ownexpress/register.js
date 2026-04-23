@@ -10,7 +10,7 @@ async function register() {
         name, emailText, passText
     )
     try {
-        const response = await fetch("https://8tfvph95-3001.euw.devtunnels.ms/api/auth/register", {
+        const response = await fetch("https://zany-winner-975xvj5wv9652pvqp-3001.app.github.dev/api/auth/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

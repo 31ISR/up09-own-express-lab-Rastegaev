@@ -9,7 +9,7 @@ async function login() {
     console.log('Отправка:', emailText, passText);
     
     try {
-        const response = await fetch("https://8tfvph95-3001.euw.devtunnels.ms/api/auth/login", {
+        const response = await fetch("https://zany-winner-975xvj5wv9652pvqp-3001.app.github.dev/api/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -22,13 +22,14 @@ async function login() {
         
         const data = await response.json();
         console.log('Ответ сервера:', data);
+        alert(123)
         
         
         if (response.ok) { 
             
             if (data.token) {
                 localStorage.setItem('token', data.token);
-                localStorage.setItem('user', JSON.stringify(data.user));
+                localStorage.setItem('user', JSON.stringify(data.role));
             }
             if(data.role === "admin"){
                 window.location.href = "admin.html"; 
