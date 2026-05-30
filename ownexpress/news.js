@@ -2,7 +2,7 @@ const container = document.querySelector(".grid");
 
 async function news() {
     try {
-        const response = await fetch("https://zany-winner-975xvj5wv9652pvqp-3001.app.github.dev/api/admin/news", {
+        const response = await fetch("https://vigilant-succotash-695p645wqxq4c4q4w-3001.app.github.dev/api/admin/news", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -53,7 +53,7 @@ async function handleDelete(event) {
     console.log(event);
     
     try {
-        const response = await fetch(`https://zany-winner-975xvj5wv9652pvqp-3001.app.github.dev/api/admin/news/${event.target.dataset.id}`, {
+        const response = await fetch(`https://vigilant-succotash-695p645wqxq4c4q4w-3001.app.github.dev/api/admin/news/${event.target.dataset.id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

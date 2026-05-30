@@ -8,7 +8,7 @@ async function addComment() {
     const textComment = document.querySelector('.comment-text').value;
 
     try {
-        const response = await fetch("https://zany-winner-975xvj5wv9652pvqp-3001.app.github.dev/api/comment", {
+        const response = await fetch("https://vigilant-succotash-695p645wqxq4c4q4w-3001.app.github.dev/api/comment", {
             method: "POST",
             headers: {
                 "Authorization": 'Bearer ' + localStorage.getItem('token'),
@@ -31,7 +31,7 @@ button.addEventListener('click', addComment);
 
 async function getComment() {
     try {
-        const response = await fetch(`https://zany-winner-975xvj5wv9652pvqp-3001.app.github.dev/api/comment/${nameState}`, {
+        const response = await fetch(`https://vigilant-succotash-695p645wqxq4c4q4w-3001.app.github.dev/api/comment/${nameState}`, {
             method: "GET",
             headers: {
                 "Authorization": 'Bearer ' + localStorage.getItem('token'),

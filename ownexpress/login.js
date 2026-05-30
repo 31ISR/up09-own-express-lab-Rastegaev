@@ -9,7 +9,7 @@ async function login() {
     console.log('Отправка:', emailText, passText);
     
     try {
-        const response = await fetch("https://zany-winner-975xvj5wv9652pvqp-3001.app.github.dev/api/auth/login", {
+        const response = await fetch("https://vigilant-succotash-695p645wqxq4c4q4w-3001.app.github.dev/api/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
